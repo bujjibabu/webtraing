@@ -1,70 +1,99 @@
 <!doctype html>
 <html>
 <head>
-<title>SHIPPING and MAILING ADDRESS</title>
-</head>
-<body>
-	<h3><font color="red"><sup>*</sup>Required Fields</font></h3>
-	<form style="background-color:yellow; "  >
-		<h2 style="background-color:blue;">SHIPPING ADDRESS</h2>
-		<table>
-		<tbody>
-			<tr>
-				<td><font color="red"><sup>*</sup></font>Name: </td> 
-				<td><input type="text" Placeholder="Enter Name"></td>
-			</tr>
-			<tr>
-				<td><font color="red"><sup>*</sup></font>Address:</td>
-				<td><input type="text" Placeholder="Enter Address"></td>
-			</tr>
-			<tr>
-				<td><font color="red"><sup>*</sup></font>City:</td>
-				<td><input type="text" Placeholder="Enter City"></td>
-			</tr>
+	<title>SHIPPING and MAILING ADDRESS</title>
+		<style type="text/css">
+			.colorred
+			{ 
+				color:red;
+			}
+			.backgrclr-blue
+			{
+				background-color:blue;
+				padding: 5px;
+				font-size: 20px;
 
-			<tr>
-				<td><font color="red"><sup>*</sup></font>State:</td>
-				<td><input type="text" Placeholder="Enter State"></td>
-			</tr>
-			<tr>
-				<td><font color="red"><sup>*</sup></font>Zipcode:</td>
-				<td><input type="text" Placeholder="Enter Zipcode"></td>
-			</tr>
-		</tbody>
-		</table>
-		<br>
-	</form>
-		<form style="background-color:yellow;">
-		<h2 style="background-color:blue;">MAILING ADDRESS</h2>
-		<table>
-			<tbody>
+			}
+			.backgrclr-ylw
+			{
+				background-color:yellow;
+				border:1px solid #000;
 				
-				<tr>
-					<td><font color="red"><sup>*</sup></font>Name:</td>
-					<td><input type="text" Placeholder="Enter Name"></td>
-				</tr>
+			}
+			.mytable
+			{
+				font-size: 20px;
+				text-align: right;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				
+			}
+		</style>
+</head>
+<body style="margin:40px 240px">
+	<h3 class="colorred"><sup>*</sup>Required Fields</font></h3>
+		<div class="backgrclr-ylw">
+			<div class="backgrclr-blue"><b>SHIPPING ADDRESS</b></div>
+				<table class="mytable" align="center">
+				<tbody>
+					<tr >
+						<td><sup class="colorred">*</sup>Name: </td> 
+						<td><input type="text" size="50"></td>
+					</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>Address:</td>
+						<td><input type="text"size="50"></td>
+					</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>City:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
 
-				<tr>
-					<td><font color="red"><sup>*</sup></font>Address:</td>
-					<td><input type="text" Placeholder="Enter Address"></td>
-				</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>State:</td>
+						<td><input type="text"size="50"></td>
+					</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>Zipcode:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<br> <br>
+		<div class="backgrclr-ylw">
+			<div class="backgrclr-blue"><b>MAILING ADDRESS</b></div>
+				<table class="mytable" align="center">
+				<tbody>
+					
+					<tr>
+						<td><sup class="colorred">*</sup>Name:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
 
-				<tr>
-					<td><font color="red"><sup>*</sup></font>City:</td>
-					<td><input type="text" Placeholder="Eneter City"></td>
-				</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>Address:</td>
+						<td><input type="text" size="50" ></td>
+					</tr>
 
-				<tr>
-					<td><font color="red"><sup>*</sup></font>State:</td>
-					<td><input type="text" Placeholder="Enter State"></td>
-				</tr>
+					<tr>
+						<td><sup class="colorred">*</sup>City:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
 
-				<tr>
-					<td><font color="red"><sup>*</sup></font>Zipcode:</td>
-					<td><input type="text" Placeholder="Enter Zipcode"></td>
-				</tr>
-			</tbody>
-		</table>
-	</form>
+					<tr>
+						<td><sup class="colorred">*</sup>State:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
+
+					<tr>
+						<td><sup class="colorred">*</sup>Zipcode:</td>
+						<td><input type="text" size="50"></td>
+					</tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
 </body>
 </html>
