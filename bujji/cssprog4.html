@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+	<title>Login Form</title>
+	<style type="text/css">
+		body{
+			background-color:rgb(49,53,49);
+		}
+		.login-form{
+	    	width: 40%;
+	    	margin-left: 30%;
+		    border-radius: 20px;
+		    background-color: rgb(255,255,255);
+		}
+		.form-heading{
+			text-align: center;
+			text-transform: uppercase;
+			color:rgb(255, 88, 72);
+			padding: 20px;
+		}
+		.userid-input, 
+		.password-input{
+			width: 70%;
+	    height: 50px;
+	    border-radius: 50px;
+	    background-color: rgb(202,202,202);
+	    font-size: 18px;
+	    padding-left: 25px;
+	    margin-bottom: 20px;
+		}
+		.userid,
+		.password{
+			text-align: center;
+		}
+		.login-btn-section{
+			width: 85%;
+	    text-align: right;
+	    margin-bottom: 30px;
+		}
+		.forgot-password-txt{
+			color:rgb(255, 88, 72);
+			font-weight: bold;
+		}
+		.login-btn{
+		 font-size: 14px;
+	    padding: 8px 30px;
+	    border-radius: 20px;
+	    color: #fff;
+	    background-color: rgb(255, 88, 72);
+	    border-color: rgb(255, 88, 72);
+		}
+		.form-bottom-section{
+			text-align: right;
+			padding: 40px 0px 40px;
+	    background-color: rgb(255, 88, 72);
+	    border-bottom-right-radius: 15px;
+	    border-bottom-left-radius: 15px;
+	    color: #fff;
+      padding-right: 15%;
+		}
+		.register-txt{
+			  font-size: 35px;
+		}
+	</style>
+</head>
+<body>
+	<form class="login-form">
+       <h2 class="form-heading">LogIn Form</h2>
+       <div class="userid">
+       		<input class="userid-input" type="text" placeholder="User Id">
+       </div>
+       <div class="password">
+       		<input type="password"  class="password-input" placeholder="Password">
+       </div>
+       <div class="login-btn-section">
+       	 <span class="forgot-password-txt">forgot password |</span>
+       	 <span><button class="login-btn">Login</button></span>
+       </div>
+       <div class="form-bottom-section">
+       		<span>New User</span>
+       		<span class="register-txt">Register</span>
+       		<span>Here &gt;</span>
+       </div>
+	</form>
+</body>
+</html>
