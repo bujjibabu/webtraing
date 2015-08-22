@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+    <head><title>shipping form</title>
+        <style>
+            body{
+                border-width: 2px;
+                border-color: rgb(99,195,99);
+                border-style: solid;
+                margin: auto;
+                width: 50%;
+                
+                }
+            #content{
+                background-color: rgb(177,196,72);
+                color: black;
+                text-transform: capitalize;
+                margin: 25px;  
+                padding: 25px;
+                position: relative;
+                border-radius: 10px;
+                
+            }
+            .div1 , .div2 , .div3 , .div4 , .div5 , .div6 , .div7 , .div8 , .div9 , .div10{
+                padding: 10px 0px 10px 10px;
+                margin: 0 0 5px 0;
+                border-radius: 7px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(235,239,209);
+                background-color: rgb(201,213,131);
+            }
+            .lbl{
+                margin:auto;
+            } 
+            .fld{
+                border-radius: 5px;
+                border-color: white;
+                height: 20px;
+                padding: 5px;
+            }
+            .fld1{
+                border-radius: 5px;
+                border-color: white;
+            }
+            .btn{
+                
+                width: 110px;
+                height: 40px;
+                background-color: rgb(75,83,30);
+                border-radius: 30px;
+                color: white;
+                font-size: 25px;
+                margin: 5px 90px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        
+            <div id="content">
+                <h3>step 1 : your details</h3>
+                <div class="div1"><span class="lbl">name</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" placeholder="First and last name" class="fld" /></span></div>
+                <div class="div2"><span class="lbl">email</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" placeholder="example@domain.com" class="fld" /></span></div>
+                <div class="div3"><span class="lbl">phone</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" placeholder="Eg. +457500000000" class="fld" /></span></div>
+                <h3>step 2 : delivery adress</h3>
+                <div class="div4"><span class="lbl">adress</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><textarea rows="5" cols="25" class="fld1" /></textarea></span></div>
+                <div class="div5"><span class="lbl">post code</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" class="fld" /></span></div>
+                <div class="div6"><span class="lbl">country</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" class="fld" /></span></div>
+                <h3>step 3 : card details</h3>
+                <div class="div7"><label>card type</label><br><br><span><input type="radio" name="sub" value="visa">&nbsp;&nbsp;visa&nbsp;&nbsp;&nbsp;&nbsp;</span><span><input type="radio" name="sub" value="amex">&nbsp;&nbsp;amex&nbsp;&nbsp;&nbsp;&nbsp;</span><span><input type="radio" name="sub" value="mastercard">&nbsp;&nbsp;mastercard&nbsp;&nbsp;&nbsp;</span></div>
+                <div class="div8"><span class="lbl">card number</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" class="fld" /></span></div>
+                <div class="div9"><span class="lbl">security code</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" size="30" class="fld" /></span></div>
+                <div class="div10"><span class="lbl">name on card</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><input type="text" size="30" placeholder="Exact name as on the card" class="fld" /></span></div>
+                <div><input type="button" name="submit" value="BUY IT!" class="btn" /></div>
+        </div>
+    </body>
+</html>
