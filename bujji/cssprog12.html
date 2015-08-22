@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+	<head>
+		<title>List Items</title>
+		<style type="text/css">
+			.heading{
+				color:red;
+				text-align: center;
+			}
+			span{
+				display: block;
+			}
+			li:first-child{
+				color:red;
+			}
+			li:last-child{
+				color:green;
+				font-size: 20px;
+			}
+			li:nth-child(4){
+				color:orange;
+				font-size: 20px;
+			}
+			.heading::first-letter{
+				color:blue;
+			}
+			.body{
+				background: url('images/bgsmall.jpg');
+			}
+			.my-form{
+				width:30%;
+				margin: 0 auto;
+				border: 1px solid red;
+				background: #fff;
+				padding-left: 20px;
+				opacity: 0.3;
+			}
+			p{
+				font-size: 30px;
+			}
+			p input{
+			    width: 50%;
+			    height: 30px;			
+			}
+			button{
+				font-size: 20px;
+    			margin-left: 42%;
+   				margin-bottom: 30px;
+			}
+		</style>
+	</head>
+	<body class="body">
+		<h3 class="heading">Inline - Block level</h3>
+		<span>My item 1</span>
+		<span>My item 2</span>
+		<span>My item 3</span>
+		<span>My item 4</span>
+		<span>My item 5</span>
+		<span>My item 6</span>
+		<ul>
+			<li>List item1</li>
+			<li>List item2</li>
+			<li>List item3</li>
+			<li>List item4</li>
+			<li>List item5</li>
+			<li>List item6</li>
+		</ul>
+		<form class="my-form">
+			<h3>LogIn Form</h3>
+			<p>
+				<label>Username:</label>
+				<input type="text" placeholder="Username">
+			</p>
+			<p>
+				<label>Passord:</label>
+				<input type="password" placeholder="Password">
+			</p>
+			<button>Sign in</button>
+		</form>
+	</body>
+</html>
