@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<title>List Items</title>
+		<style type="text/css">
+			.heading{
+				color:green;
+				text-align: center;
+			}
+			.my-div{
+				height:100px;
+				width:100px;
+				background: red;
+				animation: myfirst 4s;
+				 -webkit-animation: myfirst 4s; /* Chrome, Safari, Opera */
+			    -moz-animation: myfirst 4s; /* mozilla */
+			    -ms-animation: myfirst 4s; /* ie*/
+			}
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes myfirst {
+			    from {
+			    	background: green;
+			    	color:blue;
+			    	font-size: 15px;
+			    }
+			    to {
+			    	background: yellow;
+			    	color:orange;
+			    	font-size: 15px;
+			    }
+			}
+
+			@keyframs myfirst{
+				 from {background: green;}
+    			 to {background: yellow;}
+			}
+		</style>
+	</head>
+	<body class="body">
+		<h1>Animations</h1>
+		<div class="my-div"> text color</div>
+	</body>
+</html>
