@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+	<head>
+		<title>List Items</title>
+		<style type="text/css">
+			.heading{
+				color:green;
+				text-align: center;
+			}
+			.my-div{
+				height:100px;
+				width:100px;
+				font-family: cursive !important;
+				background: red;
+				animation: myfirst 15s;
+				 -webkit-animation: myfirst 15s; /* Chrome, Safari, Opera */
+			    -moz-animation: myfirst 15s; /* mozilla */
+			    -ms-animation: myfirst 15s; /* ie*/
+			}
+			/* Chrome, Safari, Opera */
+			@-webkit-keyframes myfirst {
+			     0% {
+			     	background: green;
+			     	color:blue;
+			     	font-family: cursive !important;
+			     }
+			    20% {
+			    	background: yellow;
+			    	color:orange;
+			    }
+			    50% {
+			    	background: blue;
+			    	color:red;
+			    	font-family: cursive !important;
+			    }
+			    75% {
+			    	background: red;
+			    	color:green;
+			    }
+			    100% {
+			    	background: black;
+			    	color:yellow;
+			    }
+			}
+
+			@keyframs myfirst{
+			    0% {background: green;}
+			    20% {background: yellow;}
+			    50% {background: blue;}
+			    75% {background: red;}
+			    100% {background: black;}
+			}
+		</style>
+	</head>
+	<body class="body">
+		<h1>Animations</h1>
+		<div class="my-div"> text color</div>
+	</body>
+</html>
