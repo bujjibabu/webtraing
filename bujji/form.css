@@ -1,0 +1,50 @@
+.head{
+	background-color: #24807D;
+	padding: 1px 15px;
+}
+.form{
+	width:40%;
+	margin: 0 auto;
+}
+.form-body{
+	text-align: center;
+	background: #c0c0c0;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+input{
+	width: 80%;
+}
+tr td:first-child{
+	text-align: right;
+    font-size: 20px;
+    width: 30%;
+    padding-bottom: 15px;
+}
+.my-header{
+	background-color: #877575;
+    width: 100%;
+    padding: 2px 4px;
+    min-height: 73px;
+    color: #fff;
+        margin-top: -20px;
+        position: fixed;
+}
+.logo-section{
+	width:20%;
+	float: left;
+	list-style-type: none;
+}
+.logo-section img{
+	max-width: 60px;
+}
+.menu-section{
+	with:80%;
+	float: right;
+	list-style-type: none;
+}
+.menu-section li{
+	display: inline-block;
+}

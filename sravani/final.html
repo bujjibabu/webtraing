@@ -2,6 +2,15 @@
 <html>
 <head>
 	<style type="text/css">
+	 @media (max-width: 480px) {
+			.form{
+				width: 88% !important;
+			}
+			.card-name{
+				padding-right: 13% !important;
+			}
+		}
+
 	.form{
 		background-color: #2F822F;
 		width: 50%;
@@ -48,7 +57,9 @@
 		border: 1px solid white;
 		border-radius: 5px;
 	}
-	
+	.card-name{
+		padding-right: 15%;
+	}
 	
 	</style>
 </head>
@@ -101,7 +112,7 @@
 <span><input class="input" type="text"></span>
 </div>
 <div class="div1">
-<span style="padding-right: 15%">Name on Card</span>
+<span class="card-name">Name on Card</span>
 <span><input class="input" type="text" placeholder="Exact name on card"></span>
 </div>
 
