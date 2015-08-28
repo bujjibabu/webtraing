@@ -1,0 +1,114 @@
+<!Doctype html>
+<html>
+    <head><title>Login-Form</title>
+        <style type="text/css">
+		  body{
+			width: 100%;
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+             
+		  }
+           .lgn{
+               width: 35%;
+               margin-left: 30%;
+               margin-top: 10%;
+               background-image: url(bgimage1.jpg);
+               background-repeat: no-repeat;
+               background-size:cover;
+               padding: 10%;
+           }
+            .box{
+                width: 410px;
+                padding: 25px;
+                margin: 50px auto;
+                border-radius: 5px;
+	            background-color: rgba(250,250,250,0.5);
+            }
+            .box ul {
+                margin: 0;
+	           padding: 0;
+	
+            }
+            .box li {
+                float: left;
+	            display: inline;
+            }
+	
+            label {
+	           display: block;
+	           color: rgb(150,153,144);
+            }
+            .inpt{
+                padding: 5px;
+	            margin-right: 10px;
+	            border: 1px solid rgb(0, 0, 0);
+	            border-radius: 3px;
+            }
+            .btn{
+                margin-right: 0;
+	            margin-top: 15px;
+	            border-radius: 4px;
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                background: #64c8ef;
+                color: #fff;
+	            padding: 5px 15px;
+	            
+            }
+            @media (max-width: 400px) {
+                .box{
+                    width: 100% !important;
+                }
+                .lgn{
+                    background-size:cover !imprtant;
+                }
+            }
+            @media only screen and (min-device-width: 320px) and (max-device-width: 568px)and             (-webkit-min-device-pixel-ratio: 2) {
+                .box{
+                    width: 100% !important;
+                }
+                .lgn{
+                    background-size:cover !imprtant;
+                }
+            }
+            @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and             (-webkit-min-device-pixel-ratio: 2) {
+                .box{
+                    width: 100% !important;
+                }
+                .lgn{
+                    background-size:cover !imprtant;
+                }
+            }
+            @media (max-width: 800px) {
+                .box{
+                    width: 100% !important;
+                }
+                .lgn{
+                    background-size:cover !imprtant;
+                }
+            }
+                
+            
+	</style>
+    </head>
+    <body>
+        <div class="lgn">
+            <fieldset class="box">
+                <ul>
+				    <li>
+					   <label>Email</label>
+					   <input type="email"  placeholder="yourname@email.com" class="inpt">
+				    </li>
+				    <li>
+					   <label>Password</label>
+					   <input type="password"  placeholder="password" class="inpt"></li>
+				    <li>
+					   <input type="submit" value="Login" class="btn">
+				    </li>
+			     </ul>
+            </fieldset>
+        </div>
+    </body>
+</html>
