@@ -1,0 +1,50 @@
+
+1) Numbers
+
+Ex: 10,120.3, 12, 2.4567 etc..
+
+2) Strings
+
+Ex: "bujji", 'murali', "123" etc..
+
+3) Boolean 
+
+Ex: true, false
+
+//Js variables
+
+var x = '1023';
+var X = 123;
+var z = true;
+
+//Operations
+
+
+var a = 10;
+var b = 20;
+
+var a = 10, b= 20;
+
+a++ // 11
+a-- //9
+
+
+comparison
+
+var a = 10;
+var b = 15;
+
+a==b ======> false
+a>b  =======> false
+a>=b ========> false
+a<b ==========> true;
+a<=b ========>true
+a!=b ======> true
+
+logical 
+
+a&&b ===> true (if a = true and b=true);
+a||b ====> true (if a=true or b=true);
+!(a&&b) ==> false
+
+
