@@ -1,0 +1,134 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>HMM</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+        <style>
+            .my-star{
+			         
+    		         color: rgb(19,101,216);
+		      }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="col-xs-3" style="color:rgb(95,111,156);">
+                <h1>HMM</h1><h5>Hospital Metrics Manager</h5>
+            </div>
+            <div class="col-xs-6"> </div>
+            <div class="col-xs-3">
+                <ul class="list-unstyled list-inline" style="margin-top:20px;">
+                    <li><img src="userdemo.png" style="width:50px; height:50px; float:left; margin:0 0 -20px 0;"></li>
+                    <li>Demo User</li>
+                    <li>&#124;</li>
+                    <li style="color:blue;">Logout</li>
+                </ul>
+            </div>
+            <div class="col-xs-12" style="background-color:rgb(54,75,131); border-radius:5px; margin-top:15px; padding-top:10px;">
+                <ul class="list-unstyled list-inline text-capitalize" style="color:white;">
+                <li>insight view</li>
+                <li>&#124;</li>
+                <li>my profile</li>
+                <li>&#124;</li>
+                <li><button class="btn btn-success btn-block" style="border-radius:20px;">My Attestations</button></li>
+            </ul>
+            </div>
+            <div class="col-xs-12" style="color:black; background-color:rgb(245,245,245); margin-top:10px; border-radius:5px; padding-top:10px;">
+                <ul class="list-unstyled list-inline text-capitalize">
+                    <li>home</li>
+                    <li>&#8827</li>
+                    <li>attestation list</li>
+                </ul>
+            </div>
+            <div class="col-xs-12" style="margin-top:20px; border:1px solid rgb(54,75,131);">
+                <ul class="list-unstyled list-inline text-capitalize text-right" style="margin-top:10px;">
+                    <li><button>filter</button></li>
+                    <li><button>new attestation</button></li>
+                </ul>
+                <label style="font-weight:300; color:rgb(170,170,170);">Instruction: Click the 'Filter' button to refine the search</label>
+                <form class="form-horizontal text-capitalize" style="background-color:rgb(227,227,227);">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" style="font-weight:300;">attestation form:</label>
+                        <div class="col-xs-10">
+                                <select class="col-sm-2"><option>-All-</option></select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" style="font-weight:300;">Panel patient:</label>
+                        <div class="col-sm-10">    
+                            <select class="col-sm-2"><option>-All-</option></select>
+                        </div>
+                </form>
+            </div>
+            <p class="text-primary text-md" style="font-size:23px;">Attestation List</p>
+                <br>
+            <p style="color:rgb(170,170,170);">Note: Click 'Attestation Form' cell to view form detais</p>
+            <table class="table table-bordered text-capitalize">
+                <thead style="background-color:rgb(150,150,150);">
+                    <tr>
+                        <th>detail</th>
+                        <th>Attestation form</th>
+                        <th>for provider</th>
+                        <th>is rendering provider</th>
+                        <th>patient</th>
+                        <th>encounter date</th>
+                        <th>attested by</th>
+                        <th>date created</th>				
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="glyphicon glyphicon-info-sign my-star"></span></td>
+                        <td>15 PNEUMOVAX</td>
+                        <td>barrie johnathon</td>
+                        <td>no</td>
+                        <td>patient 8,male</td>
+                        <td>10/24/2013</td>
+                        <td>admin, system [system admin]</td>
+                        <td>2013-11-04 00:54:22 CST</td>
+                    </tr>
+                     <tr>
+                        <td><span class="glyphicon glyphicon-info-sign my-star"></span></td>
+                        <td>15 PNEUMOVAX</td>
+                        <td>barrie johnathon</td>
+                        <td>no</td>
+                        <td>patient 8,male</td>
+                        <td>10/24/2013</td>
+                        <td>admin, system [system admin]</td>
+                        <td>2013-11-04 00:54:22 CST</td>
+                    </tr>
+                     <tr>
+                        <td><span class="glyphicon glyphicon-info-sign my-star"></span></td>
+                        <td>15 PNEUMOVAX</td>
+                        <td>barrie johnathon</td>
+                        <td>no</td>
+                        <td>patient 8,male</td>
+                        <td>10/24/2013</td>
+                        <td>admin, system [system admin]</td>
+                        <td>2013-11-04 00:54:22 CST</td>
+                    </tr>
+                     <tr>
+                        <td><span class="glyphicon glyphicon-info-sign my-star"></span></td>
+                        <td>15 PNEUMOVAX</td>
+                        <td>barrie johnathon</td>
+                        <td>no</td>
+                        <td>patient 8,male</td>
+                        <td>10/24/2013</td>
+                        <td>admin, system [system admin]</td>
+                        <td>2013-11-04 00:54:22 CST</td>
+                    </tr>
+                     <tr>
+                        <td><span class="glyphicon glyphicon-info-sign my-star"></span></td>
+                        <td>15 PNEUMOVAX</td>
+                        <td>barrie johnathon</td>
+                        <td>no</td>
+                        <td>patient 8,male</td>
+                        <td>10/24/2013</td>
+                        <td>admin, system [system admin]</td>
+                        <td>2013-11-04 00:54:22 CST</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
