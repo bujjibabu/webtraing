@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>
+
+	<table class="table table-bordered">
+		<tr>
+			<td>S.no</td>
+			<td>Name</td>
+			<td>Phone</td>
+		</tr>
+		<tr>
+			<td class="sno"></td>
+			<td id="name"></td>
+			<td id="mobile"></td>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+		var myObj = {name:'raja',phone:768987654,sno:67};
+		document.getElementsByClassName('sno')[0].innerHTML = myObj.sno;
+		document.getElementById('name').innerHTML = myObj.name;
+		document.getElementById('mobile').innerHTML = myObj.phone;
+	</script>
+</body>
+</html> 
