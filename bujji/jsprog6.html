@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>	
+	<div class="col-xs-offset-4 col-xs-4">
+		<h2>Name: <span id="name"></span></h2>
+		<h2>Mobile: <span id="mobile"></span></h2>
+		<h2>Value1: <span id="val1"></span></h2>
+		<h2>Value2: <span id="val2"></span></h2>
+
+	</div>
+	<script type="text/javascript">
+		var myObj = {name:'bujjibabu',phone:9533068603};
+		document.getElementById('name').innerHTML = myObj.name;
+		document.getElementById('mobile').innerHTML = myObj.phone;
+
+		if(myObj.name=='bujjibabu'){
+			document.getElementById('name').style.color = 'red';
+		}
+			document.getElementById('mobile').style.color = 'green';
+		var x = ' bujji ';
+		var y = 'bujji';
+		
+		if(x==y){
+			alert('equel')
+		}else{
+			alert('not equel');
+		}
+
+		document.getElementById('val1').innerHTML = x.length;
+		document.getElementById('val2').innerHTML = y.length;
+				
+	</script>
+</body>
+</html> 

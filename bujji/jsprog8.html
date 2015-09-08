@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>	
+	<div class="col-xs-offset-4 col-xs-4">
+		<button class="btn btn-success" onclick="fun1()">function1</button>
+		<button class="btn btn-default" onclick="fun2()">function2</button>
+	</div>
+	<script type="text/javascript">
+
+		var a = 10;
+		function fun1(){
+			  a = 20;
+			alert("Function 1 a value : "+ a);
+		}
+		function fun2(){
+			alert('function2 a value:'+ a);
+			//var y = 20;
+			//alert(y);
+		}
+		alert('initial a value :' + a);
+
+	</script>
+</body>
+</html> 

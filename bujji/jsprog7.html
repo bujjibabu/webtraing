@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bootstrap</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>	
+	<div class="col-xs-offset-4 col-xs-4">
+		<button class="btn btn-success" onclick="fnMyTestSumbmit(5,6)">Sum</button>
+		<div>
+			Sum : <span id="sum"></span>
+		</div>
+		<button class="btn btn-default" onclick="myAnother()">Mul</button>
+	</div>
+	<script type="text/javascript">
+        var g = 10; //global
+        var num1=10;
+        var num2;
+
+        if(num1===num2){
+        	alert('equel');
+        }else{
+        	//alert('notequel');
+        }
+
+        function myAnother(){
+			    num1 = 20;
+			var num2 = 12;
+			alert('Mul:'+ num1*num2*g);
+		};
+
+		function fnMyTestSumbmit(x,y){
+			// alert("Before Assigning:"+num1);
+			// num1 = 30;
+			// alert("After Assigning:"+num1);
+			// console.log(num1)
+			document.getElementById('sum').innerHTML = x+y+g+num1;
+		};
+		function fnclick(){
+		alert("After Assigning:"+num1);
+	   }
+				
+	</script>
+</body>
+</html> 
