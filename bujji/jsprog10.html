@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Finding the largest number.</p>
+<button onmouseover="first()">first</button>
+<button onclick="second()">second</button>
+
+<script>
+function first() {
+    x=10;
+    alert('fromfirst:'+ x);
+
+}
+function second() {
+   alert("fromsecond:"+x);
+}  
+
+
+var myString = "please find where find occures";
+var pos = myString.indexOf('find');
+//alert("from indexof: "+pos);
+
+var pos2 = myString.search('find');
+//alert("from search method:"+pos2);
+
+var slicmethod = "apple, banana, kiwi";
+var res = slicmethod.slice(-12,-3);
+//alert(res);
+
+var substring = "apple, banana, kiwi";
+var res1 = substring.substring(7,13);
+//alert(res1);
+
+var substr  = "apple, banana, kiwi";
+var res2 = substr.substr(7,12);
+//alert(res2);
+
+var myreplace = 'I am from innominds';
+var afterreplace = myreplace.replace('innominds','tcs');
+alert(afterreplace);
+
+//document.getElementById("demo").innerHTML = findMax(4, 5, 6);
+</script>
+
+</body>
+</html>
