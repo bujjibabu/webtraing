@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body>
+	<h2>Arrays</h2>
+	<h1 id="mytext"></h1>
+<script>
+var myArray = ['murali','bujji','arya','john','raja','rani','user1','user2'];
+var sortArray = myArray.sort();
+//var reverseArray = sortArray.reverse();
+//console.log(reverseArray);
+var numberArray = [4,1,8,3,16,10,100];
+var sortnumbers = numberArray.sort(function(a,b){return b-a});
+console.log('sortnumbers:: ',sortnumbers);
+
+var text ='';
+for(var i=0;i<myArray.length;i++){
+	text += sortArray[i] + "<br>";
+}
+document.getElementById('mytext').innerHTML=text;
+
+</script>
+</body>
+</html>
