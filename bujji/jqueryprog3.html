@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<p class="para0">This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph</p>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Head1</th>
+			<th>Head2</th>
+			<th>Head3</th>
+			<th>Head4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+	</tbody>
+</table>
+<button class="btn btn-primary myhide-btn">hide()</button>
+<button class="btn btn-primary toggle-btn">toggle()</button>
+
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+<script type="text/javascript">
+	$(function(){
+	
+		$('.myhide-btn').click(function(){
+			$('.para0').hide('slow');
+		})
+
+		$('.toggle-btn').click(function(){
+			$('table').toggle(3000);
+		})
+
+//hide(speed, callback)
+
+	});
+</script>
+</body>
+</html>

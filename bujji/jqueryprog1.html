@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+<p id="para0"></p>
+<p id="para">no data available</p>
+<h1 class="myhead"></h1>
+
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var obj = {text:"bujjiiii"};
+		/* if(obj.text){
+			document.getElementById('para0').innerHTML=obj.text;
+		}else{
+			document.getElementById('para').style.display="block";
+
+		} */
+		$('.myhead').html('Hello');
+		if(obj.text){
+			$('#para0').html(obj.text);
+			$('#para').hide();
+		}else{
+			$('#para').show();
+		}
+	})
+		
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+	h1{
+		color:red;
+	}
+	</style>
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<p id="para0">This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph </p>
+	<ul class="myul-cls">
+		<li>list item1</li>
+		<li>list item2</li>
+		<li>list item3</li>
+		<li>list item4</li>
+		<li>list item5</li>
+	</ul>
+	<ul class="anotherul-cls">
+		<li>list item1</li>
+		<li>list item2</li>
+		<li>list item3</li>
+		<li>list item4</li>
+		<li>list item5</li>
+	</ul>
+	<ul class="thirdul-cls">
+		<li>list item1</li>
+		<li>list item2</li>
+		<li>list item3</li>
+		<li>list item4</li>
+		<li>list item5</li>
+	</ul>
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Head1</th>
+			<th>Head2</th>
+			<th>Head3</th>
+			<th>Head4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+	</tbody>
+</table>
+
+	<button class="btn btn-primary myhide-btn">hide()</button>
+	<button class="btn btn-primary myshow-btn">show()</button>
+	<button class="btn btn-primary applycss">Applycss</button>
+	<button class="btn btn-primary headback">Table head</button>
+	
+
+<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		/* hide function starting*/
+		$('.myhide-btn').click(function(){
+			$('#para0').hide();
+		});
+
+		$('.myshow-btn').click(function(){
+			$('#para0').show();
+		});
+
+		$('.applycss').click(function(){
+			// $('.myul-cls').css('color','red');
+			$('.myul-cls').css({'color':'red','font-size':'30px','background':'#000'});
+
+		})
+
+		$('ul li:first-child').css('color','blue');
+
+		//$('*').css('color','red');
+
+		$('.myul-cls li:first').css('color','green');
+		$('.myul-cls li:nth-child(2)').css('color','green');
+
+		$('tbody tr:even').css({'color':'red'});
+		$('tbody tr:odd').css({'color':'blue'});
+
+		$('.headback').dblclick(function(){
+			$('thead').css({'background':'#000','color':'#fff'})
+		})
+
+	});
+</script>
+</body>
+</html>
