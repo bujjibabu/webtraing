@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+	.para0{
+		position: relative;
+	}
+	</style>
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<p class="para0">This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph</p>
+
+	<div class="mydiv"></div>
+	<button class="btn btn-success animate-btn">animate()</button>
+	<button class="btn btn-success chain-btn">chaining()</button>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('.animate-btn').click(function(){
+				$('.mydiv').animate({left:"500px",opacity:"0.5",height:"200px",width:"200px"},6000);
+			})
+
+			$('.chain-btn').click(function(){
+				 $('.para0').css({color:'red'}).slideUp(2000).slideDown(2000).animate({left:"100px"});
+			});
+
+
+		});
+	</script>
+	</body>
+</html>

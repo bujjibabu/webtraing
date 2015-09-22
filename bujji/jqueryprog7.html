@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<p class="para0">This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my </b>paragraph</b></p>
+	<form>
+		<div class="form-group">
+			<label>Username:</label>
+			<input type="text" class="form-control setvalue">
+			<label>paaaword:</label>
+			<input type="password" class="form-control getval" value="demo">
+		</div>
+	</form>
+	<div class="set-text"></div>
+	<button class="btn btn-warning get-btn">get()</button>
+	<button class="btn btn-warning set-btn">set()</button>
+	<button class="btn btn-warning setval-btn">setval()</button>
+	<button class="btn btn-warning getval-btn">getval()</button>
+
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.get-btn').click(function(){
+				var getdata = $('.para0').html();
+				console.log(getdata);
+			})
+
+			$('.set-btn').click(function(){
+				$('.set-text').html('This is <b>bujji</b> from hyd');
+			})
+
+			$('.setval-btn').click(function(){
+				$('.setvalue').val('Bujji babu');
+			})
+			$('.getval-btn').click(function(){
+				alert($('.getval').val());
+			})
+
+
+		});
+	</script>
+	</body>
+</html>

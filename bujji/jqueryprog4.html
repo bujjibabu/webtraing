@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+		.para0{
+			background: red;
+		}
+		table{
+			display: none;
+		}
+	</style>
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<p class="para0">This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph
+	This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph This is my paragraph</p>
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Head1</th>
+			<th>Head2</th>
+			<th>Head3</th>
+			<th>Head4</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+		<tr>
+			<td>td1</td>
+			<td>td2</td>
+			<td>td3</td>
+			<td>td3</td>
+		</tr>
+	</tbody>
+</table>
+	<button class="btn btn-primary myhide-btn">fadeOut()</button>
+	<button class="btn btn-primary fadein-btn">fadeIn()</button>
+	<button class="btn btn-primary toggle-btn">fadeToggle()</button>
+	<button class="btn btn-primary fadeto-btn">fadeTo()</button>
+	<button class="btn btn-danger slideup-btn">slideUp()</button>
+	<button class="btn btn-waring slidedown-btn">slideDown()</button>
+	<button class="btn btn-waring slidetoggle-btn">slideToggle()</button>
+
+		<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$('.myhide-btn').click(function(){
+					$('.para0').fadeOut(3000, function(){
+						$('table').css({'background':'green','color':'red'});
+					});
+				})
+
+				$('.fadein-btn').click(function(){
+					$('.para0').fadeIn(10000);
+				})
+				$('.toggle-btn').click(function(){
+					$('.para0').fadeToggle(5000,function(){
+						alert('toggle completed');
+					});
+				})
+
+				$('.fadeto-btn').click(function(){
+					$('.para0').fadeTo(5000,0.2);
+				})
+
+				$('.slideup-btn').click(function(){
+					$('.para0').slideUp(4000);
+				})
+				$('.slidedown-btn').click(function(){
+					$('.para0').slideDown(4000);
+				})
+
+				$('.slidetoggle-btn').click(function(){
+					$('.para0').slideToggle(200);
+				})
+			});
+
+
+			// $(selector).fadeIn(speed, callback);
+			// $(selector).fadeIn(speed, function(){});
+		</script>
+	</body>
+</html>
