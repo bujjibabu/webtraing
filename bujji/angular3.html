@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>Two Way Binding</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body ng-app>
+	<div class="my-bootsrap-main col-xs-12">
+		<div class="form-group">
+			<label>Name:</label>
+			<input class="form-control" placeholder="Enter Name" ng-model="username">
+			<label>password:</label>
+			<input class="form-control" placeholder="Enter Name" ng-model="password">
+			<h1>Welcome <span>{{username}}</span></h1>
+			<h1>Welcome <span ng-bind="username"></span></h1>
+		</div>
+		<div>{{1+2}}</div>
+
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+
+	// var myobject = {
+	// 	name:$scope.username,
+	// 	password:$scope.password
+	// }
+
+	
+	// $.ajax({
+	// 	url:'url',
+	// 	method:"POST",
+	// 	data:myobject,
+	// 	success:function(){
+
+	// 	},
+	// 	error:function(){
+
+	// 	}
+	// })
+
+	// $http.post('url',myobject,function(){
+	// 	isuser = true;
+	// },function(){
+	// 	alert('tryagain');
+	// });
+
+	// if(isuser){
+	// location.path('dashboard.html');
+	// }else{
+	// 	alert("try again password or username in correct");
+	// }
+
+	</script>
+</body>
+</html> 

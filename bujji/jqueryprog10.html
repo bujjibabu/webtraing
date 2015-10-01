@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+		.dymanicclass{
+			border: 1px solid red;
+			font-size: 25px;
+		}
+		.menu-items li{
+			background: black;
+		    color: #fff;
+		    padding: 10px 50px 10px 50px;
+		    font-size: 20px;	
+    	}
+    	.menu-active{
+    		background:red !important;
+    	}
+    	ul li:hover{
+    		background:blue !important;
+    	}
+	</style>
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<div class="col-sm-12">
+		<!-- <button id="my-btn" class="btn btn-success">addclass</button> -->
+		<ul class="menu-items list-unstyled list-inline">
+			<li class="menu-item">Home
+			</li>
+			<li  class="menu-item">About</li>
+			<li  class="menu-item">contact</li>
+			<li  class="menu-item">Map</li>
+			<li  class="menu-item">products</li>
+		</ul>
+		<div>
+			<h1 class="head"></h1>
+			<p class="desc"></p>
+		</div>
+	</div>
+
+	<!-- <button class="btn btn-warning add-cls">addClass()</button> -->
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$('.menu-items li').click(function(){
+				$('ul li').removeClass('menu-active');
+				$(this).addClass('menu-active');
+				console.log(this.innerText);
+				$.ajax({
+				  method: "GET",
+				  url: "data/home.json"
+				}).done(function( res ) {
+					var data=JSON.parse(res);
+					$('.head').html(data.head);
+					$('.desc').html(data.desc);
+				  }).fail(function(){
+				  	alert('ajaxfail');
+				  });
+			})
+		});
+	</script>
+	</body>
+</html>

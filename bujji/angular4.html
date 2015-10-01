@@ -1,0 +1,46 @@
+<!doctype html>
+<html  ng-app="myApp">
+<head>
+	<title>Two Way Binding</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body ng-controller="testCtrl">
+	<div class="my-bootsrap-main col-xs-12">
+		<div class="form-group">
+			<label>Name:</label>
+			<input class="form-control" placeholder="Enter Name" ng-model="username">
+		</div>
+		<div class="form-controller">
+			<label>password:</label>
+			<input type="password" class="form-control" placeholder="Enter Name" ng-model="password">
+		</div>
+		<button ng-click="fnSubmit()">LogIn</button>
+		<h1>{{username}}</h1>
+		<h1>{{password}}</h1>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp',[]).controller('testCtrl',function($scope,$http){
+
+		$scope.fnSubmit = function(){
+			// var name = $scope.username;
+			// var password = $scope.password;
+			var myObj = {
+				uname:$scope.username,
+				pwd:$scope.password
+			}
+			console.log(myObj);
+//http call
+			$http.get('https:www.google.co.in',function(data){
+				var myresultdata = data;
+				alert('success')
+			},function(){
+				alert('Fail')
+			});
+
+		}
+
+	})
+	</script>
+</body>
+</html> 

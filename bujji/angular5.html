@@ -1,0 +1,203 @@
+<!doctype html>
+<html  ng-app="myApp">
+<head>
+	<title>Two Way Binding</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body ng-controller="testCtrl">
+	<div class="my-bootsrap-main col-xs-12">
+		<form class="col-xs-4">
+			<!-- <div class="form-group">
+				<label>S.No</label>
+				<input class="form-control" placeholder="Enter No" ng-model="sno">
+			</div> -->
+			<div class="form-group">
+				<label>Name</label>
+				<input class="form-control" placeholder="Enter Name" ng-model="name">
+			</div>
+			<div class="form-group">
+				<label>Address</label>
+				<input class="form-control" placeholder="Enter Address" ng-model="address">
+			</div>
+			<div class="form-group">
+				<label>Mobile</label>
+				<input class="form-control" placeholder="Enter No" ng-model="mobile">
+			</div>
+			<button ng-show="!editflag" class="btn btn-primary" ng-click="fnCreate()">Create</button>
+			<button ng-show="editflag" class="btn btn-primary" ng-click="fnUpdate()">Update</button>
+		</form>
+
+		<table class="table table-bordered">
+			<thead>
+				<tr>
+					<th>S.no</th>
+					<th>Name</th>
+					<th>Address</th>
+					<th>Mobile</th>
+					<th>Delete</th>
+					<th>View</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myObject">
+					<td>{{$index + 1}}</td>
+					<td>{{obj.name}}</td>
+					<td>{{obj.address}}</td>
+					<td>{{obj.mobile}}</td>
+					<td>
+						<button class="btn btn-danger" ng-click="fnDelete($index)">Delete</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="fnview(obj,$index)">View</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-info" ng-click="fnEdit(obj,$index)">Edit</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+<!-- Small modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-sm">Small modal</button> -->
+
+<div class="modal fade bs-example-modal-sm" role="dialog" aria-labelledby="gridSystemModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="gridSystemModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>S.no</th>
+							<th>Name</th>
+							<th>Address</th>
+							<th>Mobile</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>{{viewObject.no}}</td>
+							<td>{{viewObject.name}}</td>
+							<td>{{viewObject.address}}</td>
+							<td>{{viewObject.mobile}}</td>
+						</tr>
+					</tbody>
+				</table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+		<!-- <div>{{myObject}}</div> -->
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp',[]).controller('testCtrl',function($scope,$http){
+
+	$scope.editflag = false;
+		// $http.get('url',
+		// 	function(data){
+		// 		$scope.myresultData = data;
+		// },
+		// 	function(){
+
+		// })
+
+	$scope.myObject = [
+	{
+		name:'bujji',
+		address:"hyderabad",
+		mobile:9533068603
+	},
+	{
+		name:'Raja',
+		address:"hyderabad",
+		mobile:9453306834
+	},
+	{
+		name:'john',
+		address:"vizag",
+		mobile:6677889967
+	},
+	{
+		name:'ramesh',
+		address:"U.S",
+		mobile:456789012
+	},
+	{
+		name:'raju',
+		address:"UK",
+		mobile:66778899647
+	},
+	{
+		name:'chris',
+		address:"U.S",
+		mobile:456789012
+	}];
+
+	// for (var i = 0; i < Things.length; i++) {
+	// 	Things[i]
+	// };
+	$scope.fnCreate = function(){
+		$scope.createObject = {
+			name:$scope.name,
+			address:$scope.address,
+			mobile:$scope.mobile
+		}
+		$scope.myObject.push($scope.createObject);
+		$scope.name='';
+		$scope.address='';
+		$scope.mobile ='';
+		//console.log('$scope.createObject :: ', $scope.createObject )
+	};
+
+	$scope.fnDelete = function(index){
+		//alert('clicked object :: '+ index);
+		$scope.myObject.splice(index,1);
+	}
+
+	$scope.fnview = function(resobj,index){
+		console.log(resobj);
+		resobj.no = index+1;
+		$scope.viewObject = resobj;
+	}
+
+	$scope.fnEdit = function(obj,index){
+		//console.log('editobject::',obj);
+		//console.log('$scope.editindex:: from edit',index);
+		$scope.editflag = true;
+		$scope.editindex = index;
+		$scope.name=obj.name;
+		$scope.address = obj.address;
+		$scope.mobile = obj.mobile;
+	}
+
+	$scope.fnUpdate = function(){
+		//console.log("$scope.editindex from update::",$scope.editindex);
+		$scope.updateObj = {
+			name:$scope.name,
+			address:$scope.address,
+			mobile:$scope.mobile
+		};
+		$scope.myObject[$scope.editindex] = $scope.updateObj;
+		$scope.name='';
+		$scope.address='';
+		$scope.mobile ='';
+		$scope.editflag = false;
+	}
+
+	})
+	</script>
+</body>
+</html> 

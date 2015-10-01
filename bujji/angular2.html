@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+	<title>Two Way Binding</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body ng-app>
+	<div class="my-bootsrap-main col-xs-12">
+		<div class="form-group">
+			<label>Name:</label>
+			<input class="form-control" placeholder="Enter Name" id="myname" onkeydown="myFunction()">
+		</div>
+		<h1>Welcome <span id="displayname"></span></h1>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript">
+		function myFunction(){
+			var name = document.getElementById('myname').value;
+			document.getElementById('displayname').innerHTML = name;
+	 	};
+	</script>
+</body>
+</html> 

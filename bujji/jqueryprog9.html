@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+		.dymanicclass{
+			border: 1px solid red;
+			font-size: 25px;
+		}
+		.menu-items li{
+			background: black;
+		    color: #fff;
+		    padding: 10px 50px 10px 50px;
+		    font-size: 20px;	
+    	}
+    	.menu-active{
+    		background:red !important;
+    	}
+    	ul li:hover{
+    		background:blue !important;
+    	}
+	</style>
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<div class="col-sm-12">
+		<!-- <button id="my-btn" class="btn btn-success">addclass</button> -->
+		<ul class="menu-items list-unstyled list-inline">
+			<li class="menu-item">Home
+
+			</li>
+			<li  class="menu-item">About</li>
+			<li  class="menu-item">contact</li>
+			<li  class="menu-item">Map</li>
+			<li  class="menu-item">products</li>
+		</ul>
+		<div id="home">
+			<h1>Home</h1>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+		</div>
+		<div id="about">
+			<h1>About</h1>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+		</div>
+		<div id="contact">
+			<h1>Contact</h1>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+		</div>
+		<div id="Map">
+			<h1>Map</h1>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+		</div>
+		<div id="products">
+			<h1>Products</h1>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+			<p>Sometimes, in a switch block, you will want different cases to use the same code, or fall-through to a common default.
+			Note from the next example, that cases can share the same code block, and that the default case does not have to be the last case in a switch block:</p>
+		</div>
+	</div>
+
+	<!-- <button class="btn btn-warning add-cls">addClass()</button> -->
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('#home').show();
+			$('#about').hide();
+			$('#contact').hide();
+			$('#Map').hide();
+			$('#products').hide();
+
+			$('.menu-items li').click(function(){
+
+				$('ul li').removeClass('menu-active');
+				$(this).addClass('menu-active');
+
+				console.log(this.innerText);
+				switch(this.innerText){
+					case 'Home':
+					$('#home').show();
+					$('#about').hide();
+					$('#contact').hide();
+					$('#Map').hide();
+					$('#products').hide();
+					break;
+					case 'About':
+					$('#home').hide();
+					$('#about').show();
+					$('#contact').hide();
+					$('#Map').hide();
+					$('#products').hide();
+					break;
+					case 'contact':
+					$('#home').hide();
+					$('#about').hide();
+					$('#contact').show();
+					$('#Map').hide();
+					$('#products').hide();
+					break;
+					case 'Map':
+					$('#home').hide();
+					$('#about').hide();
+					$('#contact').hide();
+					$('#Map').show();
+					$('#products').hide();
+					break;
+					case 'products':
+					$('#home').hide();
+					$('#about').hide();
+					$('#contact').hide();
+					$('#Map').hide();
+					$('#products').show();
+					break;
+					default :
+					$('#home').show();
+					$('#about').hide();
+					$('#contact').hide();
+					$('#Map').hide();
+					$('#products').hide();
+					break;
+				}
+			})
+		});
+	</script>
+	</body>
+</html>

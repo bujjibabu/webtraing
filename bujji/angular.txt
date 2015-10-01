@@ -1,0 +1,13 @@
+-> single page.
+-> mvc
+m->model
+c-controller
+v-view
+-> RIA
+-> client side applications.
+-> cross browser.
+-> support web and mobile.
+-> open source.
+-> google
+
+

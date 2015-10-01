@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+</head>
+<body class="container">
+	<h1>jQuery</h1>
+	<div class="col-sm-12">
+		<a class="my-anc">google </a>
+		<p class="my-para">Google Inc. is an American multinational technology company specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, and software.[8] Most of its profits are derived from AdWords,[9][10] an online advertising service that places advertising near the list of search results. Google Inc. is an American multinational technology company specializing in Internet-related services and products. These include online advertising technologies, search, cloud computing, and software.[8] Most of its profits are derived from AdWords,[9][10] an online advertising service that places advertising near the list of search results.</p>
+	</div>
+
+	<button class="btn btn-warning attr-btn">attr()</button>
+	<button class="btn btn-warning empty-btn">empty()</button>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript">
+		$(function(){
+
+			$('.attr-btn').click(function(){
+				// $('.my-anc').attr('href','http:www.google.com');
+				// $('.my-anc').attr("id","anc");
+				// $('.my-anc').attr("target","_blank");
+				$('.my-anc').attr({'href':'http:www.google.com',"id":"anc","target":"_blank"});
+			});
+
+
+			// $('.my-anc').prepend('(prepend)');
+			// $('.my-anc').append('(append)');
+			$('.my-anc').after('<span>after</span>');
+			$('.my-anc').before('<span>before</span>');
+
+			$('.empty-btn').click(function(){
+				$('.my-para').empty();
+				//$('.my-para').remove();
+			})
+			
+		});
+	</script>
+	</body>
+</html>
