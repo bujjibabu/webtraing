@@ -1,0 +1,17 @@
+<h1>{{pagename}}</h1>
+<div class="col-sm-8">
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>S.No</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="user in tableData">
+			<td>{{user.name}}</td>
+			<td>{{user.sno}}</td>
+		</tr>
+	</tbody>
+</table>
+</div>

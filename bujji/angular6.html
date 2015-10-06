@@ -1,0 +1,101 @@
+<!doctype html>
+<html  ng-app="myApp">
+<head>
+	<title>Two Way Binding</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap-3.3.5-dist/css/bootstrap.css">
+	<style type="text/css">
+		.usertxt{
+			font-size: 30px;
+			color:blue;
+		}
+		.searchbox{
+			margin-top:10px;
+		}
+	</style>
+</head>
+<body ng-controller="testCtrl">
+	<div class="my-bootsrap-main col-xs-12">
+		<div class="col-sm-8 usertxt">Users </div>
+		<div class="col-sm-4 searchbox">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="search" ng-model="searchkey">
+			</div>
+		</div>
+		<table class="table table-bordered" ng-init="reverse=true;ordername='name'">
+			<thead>
+				<tr>
+					<th>S.No</th>
+					<th ng-click="ordername='name';reverse=!reverse" >
+						Name 
+						<i ng-class="reverse==true && 'glyphicon glyphicon-chevron-up' || 'glyphicon glyphicon-chevron-down'" ></i>
+					</th>
+					<th ng-click="ordername='address';reverse=!reverse">Address <i ng-class="reverse==true && 'glyphicon glyphicon-chevron-up' || 'glyphicon glyphicon-chevron-down'" ></i>
+					</th>
+					<th ng-click="ordername='mobile';reverse=!reverse">Mobile <i ng-class="reverse==true && 'glyphicon glyphicon-chevron-up' || 'glyphicon glyphicon-chevron-down'" ></i></th>
+					<th>Delete</th>
+					<th>View</th>
+					<th>Edit</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="obj in myArray | filter:searchkey | orderBy: ordername:reverse">
+					<td>{{$index + 1}}</td>
+					<td>{{obj.name}}</td>
+					<td>{{obj.address}}</td>
+					<td>{{obj.mobile}}</td>
+					<td>
+						<button class="btn btn-danger" ng-click="fnDelete($index)">Delete</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-success" data-toggle="modal" data-target=".bs-example-modal-sm" ng-click="fnview(obj,$index)">View</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-info" ng-click="fnEdit(obj,$index)">Edit</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="bootstrap-3.3.5-dist/js/bootstrap.js"></script>
+	<script type="text/javascript">
+	angular.module('myApp',[]).controller('testCtrl',function($scope,$http){
+
+	$scope.myArray = [
+	{
+		name:'bujji',
+		address:"hyderabad",
+		mobile:9533068603
+	},
+	{
+		name:'Raja',
+		address:"hyderabad",
+		mobile:9453306834
+	},
+	{
+		name:'john',
+		address:"vizag",
+		mobile:6677889967
+	},
+	{
+		name:'ramesh',
+		address:"U.S",
+		mobile:456789012
+	},
+	{
+		name:'raju',
+		address:"UK",
+		mobile:66778899647
+	},
+	{
+		name:'chris',
+		address:"U.S",
+		mobile:456789012
+	}];
+
+	})
+	</script>
+</body>
+</html> 
+
