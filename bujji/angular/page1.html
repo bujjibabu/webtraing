@@ -1,14 +1,14 @@
 <h2>{{pagename}}</h2>
-<table class="table table-bordered">
-	<thead>
+<table class="table table-bordered my-table">
+	<thead class="my-table-head">
 		<tr>
-			<th>S.No</th>
+			<th class="sno">S.No</th>
 			<th>Name</th>
 		</tr>
 	</thead>
-	<tbody>
+	<tbody class="tbody">
 		<tr ng-repeat="user in tableData">
-			<td>{{user.name}}</td>
+			<td class="sno-txt">{{user.name}}</td>
 			<td>{{user.sno}}</td>
 		</tr>
 	</tbody>
